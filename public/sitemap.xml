@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace https://example.com/ with your site's address before publishing. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/image-to-pdf/</loc></url>
+  <url><loc>https://example.com/pdf-to-image/</loc></url>
+  <url><loc>https://example.com/merge-pdf/</loc></url>
+  <url><loc>https://example.com/split-pdf/</loc></url>
+  <url><loc>https://example.com/compress-image/</loc></url>
+  <url><loc>https://example.com/rotate-pdf/</loc></url>
+  <url><loc>https://example.com/privacy/</loc></url>
+</urlset>

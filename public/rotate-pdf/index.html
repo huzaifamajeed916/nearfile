@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' blob: data:; worker-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>Rotate PDF Pages & Delete Pages Online, Free | Nearfile</title>
+  <meta name="description" content="Turn sideways PDF pages upright and remove pages you don’t need. Rotate one page or all at once, with page previews. Free, and your PDF never leaves your device.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nearfile">
+  <meta property="og:title" content="Rotate PDF Pages & Delete Pages Online, Free | Nearfile">
+  <meta property="og:description" content="Turn sideways PDF pages upright and remove pages you don’t need. Rotate one page or all at once, with page previews. Free, and your PDF never leaves your device.">
+  <meta name="theme-color" content="#eceff3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11151c" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <script src="../assets/js/theme-init.js"></script>
+  <script src="../assets/js/site.js" defer></script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Rotate & delete pages | Nearfile", "description": "Turn sideways PDF pages upright and remove pages you don’t need. Rotate one page or all at once, with page previews. Free, and your PDF never leaves your device.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "browserRequirements": "Requires a modern web browser", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+</head>
+<body class="t-rotate-pdf">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="../"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="k" d="M16 2v28M2 16h28" stroke-width="2.25" fill="none"/><circle class="k" cx="16" cy="16" r="9.5" stroke-width="2.25" fill="none"/><path class="c" d="M16 16V10.5A5.5 5.5 0 0 1 21.5 16Z"/><path class="m" d="M16 16v5.5a5.5 5.5 0 0 1-5.5-5.5Z"/></svg><span>Nearfile</span></a>
+    <nav class="site-nav" id="site-nav" aria-label="Tools">
+      <ul>
+          <li><a class="t-image-to-pdf" href="../image-to-pdf/">Image to PDF</a></li>
+          <li><a class="t-pdf-to-image" href="../pdf-to-image/">PDF to image</a></li>
+          <li><a class="t-merge-pdf" href="../merge-pdf/">Merge PDF</a></li>
+          <li><a class="t-split-pdf" href="../split-pdf/">Split PDF</a></li>
+          <li><a class="t-compress-image" href="../compress-image/">Compress image</a></li>
+          <li><a class="t-rotate-pdf" href="../rotate-pdf/" aria-current="page">Rotate PDF</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Dark theme" title="Dark theme">
+        <svg class="icon moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg class="icon sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button type="button" class="icon-btn nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="site-nav">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span>Tools</span>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <header class="tool-head">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="../">Home</a></li><li aria-current="page">Rotate & delete pages</li></ol></nav>
+      <h1><span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 8h9v13h-9z"/><path d="M4 13V9a5 5 0 0 1 5-5h4"/><path d="m11 1.5 2.5 2.5L11 6.5"/></svg></span>Rotate and delete PDF pages</h1>
+      <p class="lead">Turn pages the right way up and remove the ones you don’t need. Your PDF stays on this device.</p>
+    </header>
+
+    <div class="workspace" data-workspace>
+      <section class="workspace__main" aria-label="Your PDF">
+        <div class="dropzone cropped" data-dropzone>
+          <svg class="icon dropzone__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V4"/><path d="m7 9 5-5 5 5"/><path d="M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg>
+          <p class="dropzone__title" data-dz-title><span class="dz-pointer">Drop a PDF here</span><span class="dz-touch">Choose a PDF</span></p>
+          <p class="dropzone__hint">One PDF at a time. Nothing is uploaded.</p>
+          <button type="button" class="btn btn--primary btn--large" data-dz-button>Select PDF</button>
+          <input type="file" class="visually-hidden" tabindex="-1" aria-hidden="true" accept="application/pdf,.pdf" data-dz-input>
+        </div>
+        <div class="notices" data-notices aria-live="polite"></div>
+        <div class="files-bar" data-files-bar hidden>
+          <p class="files-bar__count" data-file-info></p>
+          <span class="files-bar__actions"><button type="button" class="btn btn--quiet btn--small" data-all-left>Turn all left</button><button type="button" class="btn btn--quiet btn--small" data-all-right>Turn all right</button></span>
+          <button type="button" class="btn btn--quiet btn--small" data-clear>Remove PDF</button>
+          <p class="files-bar__tip" data-tip>Use the buttons under each page to turn it or delete it.</p>
+        </div>
+        <ol class="pages" data-pages aria-label="Pages"></ol>
+      </section>
+
+      <aside class="panel" data-panel hidden aria-labelledby="settings-title">
+        <h2 id="settings-title">Your changes</h2>
+        <form data-options novalidate>
+          <p class="panel__summary" data-summary aria-live="polite"></p>
+          <div class="actions">
+            <button type="submit" class="btn btn--primary btn--large btn--block" data-convert>Save PDF</button>
+            <div class="progress" data-progress hidden>
+              <div class="progress__label"><span data-progress-label>Preparing</span><span data-progress-pct>0%</span></div>
+              <div class="progress__track" role="progressbar" aria-label="Progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><div class="progress__bar"></div></div>
+            </div>
+            <button type="button" class="btn btn--quiet btn--block" data-cancel hidden>Cancel</button>
+          </div>
+          <button type="button" class="btn btn--quiet btn--block" data-reset>Undo all changes</button>
+        </form>
+        <div class="result" data-result hidden></div>
+      </aside>
+    </div>
+
+    <div class="help">
+      <section aria-labelledby="how-title">
+        <h2 id="how-title">How to rotate or delete PDF pages</h2>
+        <ol class="steps">
+          <li><span><strong>Add your PDF.</strong> Drop it on the page, or tap Select PDF.</span></li>
+          <li><span><strong>Turn pages.</strong> Use the arrows under a page, or turn every page at once.</span></li>
+          <li><span><strong>Delete pages you don’t need.</strong> Tap the bin under a page. Tap it again to keep the page after all.</span></li>
+          <li><span><strong>Save and download.</strong> You get a new copy. The original file on your device isn’t changed.</span></li>
+        </ol>
+      </section>
+      <section class="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Questions and answers</h2>
+        <details>
+          <summary>Is my PDF uploaded anywhere?</summary>
+          <p>No. Nearfile opens the PDF inside this browser tab and does all the work there. Nothing is sent to a server, and closing the tab clears everything. Once the page has loaded, it even works offline.</p>
+        </details>
+        <details>
+          <summary>Is the rotation permanent?</summary>
+          <p>Yes. Pages are saved with their new orientation, so every PDF reader shows them the right way up. The page content itself isn’t redrawn, so quality doesn’t change.</p>
+        </details>
+        <details>
+          <summary>Can I undo a change?</summary>
+          <p>Before saving, tap a button again or choose Undo all changes. After saving, your original file is still on your device, unchanged.</p>
+        </details>
+        <details>
+          <summary>Can I move pages around?</summary>
+          <p>Not in this tool. To reorder pages, use Split PDF and type the pages in the order you want, for example 3, 1-2, 4-.</p>
+        </details>
+        <details>
+          <summary>Can I use a password-protected PDF?</summary>
+          <p>Not yet. If a PDF needs a password to open, or is locked against editing, open it in your PDF reader, save a copy without the protection, and use that copy.</p>
+        </details>
+      </section>
+    </div>
+
+    <section class="related" aria-labelledby="related-title">
+      <h2 id="related-title">Other tools</h2>
+      <ul>
+        <li><a class="t-split-pdf" href="../split-pdf/"><span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v7H6zM6 14h12v7H6z"/><path d="M2.5 12h2M8 12h2.5M13.5 12h2.5M19.5 12h2"/></svg></span>Split PDF</a></li>
+        <li><a class="t-merge-pdf" href="../merge-pdf/"><span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h6v8H4zM14 3h6v8h-6z"/><path d="M7 11v3h10v-3"/><path d="M12 14v7"/><path d="m9 18 3 3 3-3"/></svg></span>Merge PDF</a></li>
+        <li><a class="t-pdf-to-image" href="../pdf-to-image/"><span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1.5"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="m3 17 5-4.5 4 3.5 3-2.5 6 5"/></svg></span>PDF to image</a></li>
+      </ul>
+    </section>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../"><svg viewBox="0 0 32 32" aria-hidden="true"><path class="k" d="M16 2v28M2 16h28" stroke-width="2.25" fill="none"/><circle class="k" cx="16" cy="16" r="9.5" stroke-width="2.25" fill="none"/><path class="c" d="M16 16V10.5A5.5 5.5 0 0 1 21.5 16Z"/><path class="m" d="M16 16v5.5a5.5 5.5 0 0 1-5.5-5.5Z"/></svg><span>Nearfile</span></a>
+        <p class="muted">Free file tools that run in your browser. No uploads, no sign-up.</p>
+      </div>
+      <nav aria-labelledby="f-pdf">
+        <h2 id="f-pdf">PDF tools</h2>
+        <ul>
+          <li><a href="../merge-pdf/">Merge PDF</a></li>
+          <li><a href="../split-pdf/">Split PDF</a></li>
+          <li><a href="../rotate-pdf/">Rotate & delete pages</a></li>
+          <li><a href="../pdf-to-image/">PDF to image</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-img">
+        <h2 id="f-img">Image tools</h2>
+        <ul>
+          <li><a href="../image-to-pdf/">Image to PDF</a></li>
+          <li><a href="../compress-image/">Compress image</a></li>
+        </ul>
+      </nav>
+      <nav aria-labelledby="f-about">
+        <h2 id="f-about">Nearfile</h2>
+        <ul>
+          <li><a href="../">All tools</a></li>
+          <li><a href="../privacy/">Privacy</a></li>
+        </ul>
+      </nav>
+    </div>
+    <p class="footer-note">Built with open-source libraries: <a href="https://github.com/Hopding/pdf-lib">pdf-lib</a>, <a href="https://github.com/mozilla/pdf.js">PDF.js</a>, <a href="https://github.com/Stuk/jszip">JSZip</a> and <a href="https://github.com/SortableJS/Sortable">SortableJS</a>.</p>
+  </div>
+</footer>
+<script src="../assets/js/pdf-preview.js" defer></script>
+<script src="../assets/js/tools/rotate-pdf.js" defer></script>
+</body>
+</html>
