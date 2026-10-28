@@ -6,18 +6,18 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' blob: data:; worker-src 'self' blob:; style-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   <title>Nearfile: Free File Converter That Never Uploads Your Files</title>
-  <meta name="description" content="Convert images to PDF, merge, split and rotate PDFs, turn PDF pages into images and compress photos. Free, no sign-up, and your files never leave your device.">
+  <meta name="description" content="Compress, merge, split and rotate PDFs, add page numbers or a watermark, convert images to PDF and resize or compress photos. Free, no sign-up, and your files never leave your device.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Nearfile">
   <meta property="og:title" content="Nearfile: Free File Converter That Never Uploads Your Files">
-  <meta property="og:description" content="Convert images to PDF, merge, split and rotate PDFs, turn PDF pages into images and compress photos. Free, no sign-up, and your files never leave your device.">
+  <meta property="og:description" content="Compress, merge, split and rotate PDFs, add page numbers or a watermark, convert images to PDF and resize or compress photos. Free, no sign-up, and your files never leave your device.">
   <meta name="theme-color" content="#eceff3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#11151c" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/css/site.css">
   <script src="assets/js/theme-init.js"></script>
   <script src="assets/js/site.js" defer></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Nearfile", "description": "Convert images to PDF, merge, split and rotate PDFs, turn PDF pages into images and compress photos. Free, no sign-up, and your files never leave your device."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Nearfile", "description": "Compress, merge, split and rotate PDFs, add page numbers or a watermark, convert images to PDF and resize or compress photos. Free, no sign-up, and your files never leave your device."}</script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -30,8 +30,12 @@
           <li><a class="t-pdf-to-image" href="pdf-to-image/">PDF to image</a></li>
           <li><a class="t-merge-pdf" href="merge-pdf/">Merge PDF</a></li>
           <li><a class="t-split-pdf" href="split-pdf/">Split PDF</a></li>
-          <li><a class="t-compress-image" href="compress-image/">Compress image</a></li>
+          <li><a class="t-compress-pdf" href="compress-pdf/">Compress PDF</a></li>
           <li><a class="t-rotate-pdf" href="rotate-pdf/">Rotate PDF</a></li>
+          <li><a class="t-add-page-numbers" href="add-page-numbers/">Page numbers</a></li>
+          <li><a class="t-watermark-pdf" href="watermark-pdf/">Watermark</a></li>
+          <li><a class="t-compress-image" href="compress-image/">Compress image</a></li>
+          <li><a class="t-resize-image" href="resize-image/">Resize image</a></li>
       </ul>
     </nav>
     <div class="header-actions">
@@ -48,7 +52,7 @@
   <div class="wrap">
     <section class="hero">
       <h1>Convert, merge and compress files without uploading them</h1>
-      <p class="lead">Nearfile turns images into PDFs, merges and splits PDFs, and shrinks photos inside this browser tab. No sign-up, no waiting for uploads, and no copy of your files on anyone’s server.</p>
+      <p class="lead">Nearfile compresses, merges and splits PDFs, turns images into PDFs, and resizes photos inside this browser tab. No sign-up, no waiting for uploads, and no copy of your files on anyone’s server.</p>
     </section>
 
     <section class="tools-section" aria-labelledby="tools-title">
@@ -87,11 +91,11 @@
           </a>
         </li>
         <li>
-          <a class="tool-card cropped t-compress-image" href="compress-image/">
-            <span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14h6v6M20 10h-6V4"/><path d="m14 10 7-7M3 21l7-7"/></svg></span>
-            <h3>Compress image</h3>
-            <p>Shrink photos with a quality slider and compare the size before and after.</p>
-            <span class="formats">JPG, PNG or WebP</span>
+          <a class="tool-card cropped t-compress-pdf" href="compress-pdf/">
+            <span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="m9.5 11.5 2.5 2 2.5-2"/><path d="m9.5 18.5 2.5-2 2.5 2"/></svg></span>
+            <h3>Compress PDF</h3>
+            <p>Make a PDF smaller for email and uploads, and see how much you saved.</p>
+            <span class="formats">Keeps text, or flattens scans</span>
           </a>
         </li>
         <li>
@@ -100,6 +104,38 @@
             <h3>Rotate & delete pages</h3>
             <p>Turn sideways pages upright and remove the pages you don’t need.</p>
             <span class="formats">Page by page, or all at once</span>
+          </a>
+        </li>
+        <li>
+          <a class="tool-card cropped t-add-page-numbers" href="add-page-numbers/">
+            <span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18H6z"/><path d="M9.5 7.5h5M9.5 10.5h5"/><path d="m11 15.8 1.4-.9V19"/></svg></span>
+            <h3>Add page numbers</h3>
+            <p>Number the pages of a PDF. Choose where, which style and where to start.</p>
+            <span class="formats">Six positions, four styles</span>
+          </a>
+        </li>
+        <li>
+          <a class="tool-card cropped t-watermark-pdf" href="watermark-pdf/">
+            <span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5s6 6.2 6 10.3a6 6 0 0 1-12 0C6 9.7 12 3.5 12 3.5z"/><path d="M9 14a3 3 0 0 0 2.5 2.9"/></svg></span>
+            <h3>Watermark PDF</h3>
+            <p>Stamp text like CONFIDENTIAL or DRAFT across the pages, with a live preview.</p>
+            <span class="formats">All pages, or the ones you pick</span>
+          </a>
+        </li>
+        <li>
+          <a class="tool-card cropped t-compress-image" href="compress-image/">
+            <span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14h6v6M20 10h-6V4"/><path d="m14 10 7-7M3 21l7-7"/></svg></span>
+            <h3>Compress image</h3>
+            <p>Shrink photos with a quality slider and compare the size before and after.</p>
+            <span class="formats">JPG, PNG or WebP</span>
+          </a>
+        </li>
+        <li>
+          <a class="tool-card cropped t-resize-image" href="resize-image/">
+            <span class="swatch" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="1.5"/><path d="M3 13h8v8"/><path d="m13 11 5.5-5.5"/><path d="M14.5 5.5h4v4"/></svg></span>
+            <h3>Resize image</h3>
+            <p>Change the size of photos by percent or pixels, and convert between formats.</p>
+            <span class="formats">JPG, PNG or WebP</span>
           </a>
         </li>
       </ul>
@@ -135,7 +171,10 @@
         <ul>
           <li><a href="merge-pdf/">Merge PDF</a></li>
           <li><a href="split-pdf/">Split PDF</a></li>
+          <li><a href="compress-pdf/">Compress PDF</a></li>
           <li><a href="rotate-pdf/">Rotate & delete pages</a></li>
+          <li><a href="add-page-numbers/">Add page numbers</a></li>
+          <li><a href="watermark-pdf/">Watermark PDF</a></li>
           <li><a href="pdf-to-image/">PDF to image</a></li>
         </ul>
       </nav>
@@ -144,6 +183,7 @@
         <ul>
           <li><a href="image-to-pdf/">Image to PDF</a></li>
           <li><a href="compress-image/">Compress image</a></li>
+          <li><a href="resize-image/">Resize image</a></li>
         </ul>
       </nav>
       <nav aria-labelledby="f-about">

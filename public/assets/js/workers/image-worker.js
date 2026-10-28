@@ -63,3 +63,37 @@ tasks.compress = async ({ images, options }) => {
   progress(1, 'Done');
   return { images: results };
 };
+
+/**
+ * payload.images:  [{ id, name, type, bytes, width, height }]   (width and height: the size to make it)
+ * payload.options: { format: 'original' | 'jpeg' | 'png' | 'webp', quality: 0..1 }
+ */
+tasks.resize = async ({ images, options }) => {
+  const results = [];
+  const total = images.length;
+  for (let i = 0; i < total; i += 1) {
+    const img = images[i];
+    progress(i / total, `Resizing image ${i + 1} of ${total}`);
+    if (img.width * img.height > MAX_PIXELS) {
+      throw new Error(`“${img.name}” would be larger than this tool can make (${Math.round(MAX_PIXELS / 1e6)} megapixels). Choose a smaller size.`);
+    }
+    const bitmap = await decode(new Blob([img.bytes], { type: img.type }), img.name);
+    img.bytes = null;
+    const type = { jpeg: 'image/jpeg', png: 'image/png', webp: 'image/webp' }[options.format] || img.type;
+
+    const canvas = new OffscreenCanvas(img.width, img.height);
+    const ctx = canvas.getContext('2d');
+    if (type === 'image/jpeg') {
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, img.width, img.height);
+    }
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(bitmap, 0, 0, img.width, img.height);
+    bitmap.close();
+
+    const out = await encode(canvas, type, options.quality);
+    results.push({ id: img.id, type: out.type, width: img.width, height: img.height, bytes: new Uint8Array(await out.arrayBuffer()) });
+  }
+  progress(1, 'Done');
+  return { images: results };
+};

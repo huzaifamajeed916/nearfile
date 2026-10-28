@@ -66,20 +66,31 @@
       annotationMode: pdfjsLib.AnnotationMode.ENABLE, // include filled-in form fields
     }).promise;
     page.cleanup();
-    return { canvas, capped: capped < scale };
+    return { canvas, capped: capped < scale, pointWidth: base.width, pointHeight: base.height };
   }
 
   const toBlob = (canvas, type, quality) => new Promise((resolve, reject) => {
     canvas.toBlob((blob) => (blob ? resolve(blob) : reject(new Error('This page was too large to save as an image.'))), type, quality);
   });
 
-  /** Renders a page at a given DPI and encodes it. Returns { blob, width, height, capped }. */
+  /**
+   * Renders a page at a given DPI and encodes it. Returns { blob, width, height, capped,
+   * pointWidth, pointHeight }, where the last two are the page's size as displayed, in points (1/72 inch).
+   */
   async function renderImage(doc, pageNumber, { dpi = 150, type = 'image/jpeg', quality = 0.92 } = {}) {
-    const { canvas, capped } = await renderCanvas(doc, pageNumber, dpi / 72);
+    const { canvas, capped, pointWidth, pointHeight } = await renderCanvas(doc, pageNumber, dpi / 72);
     const { width, height } = canvas;
     const blob = await toBlob(canvas, type, quality);
     canvas.width = canvas.height = 0; // frees memory straight away on iOS
-    return { blob, width, height, capped };
+    return { blob, width, height, capped, pointWidth, pointHeight };
+  }
+
+  /** A page's size as displayed (after any rotation), in points. */
+  async function pageSize(doc, pageNumber) {
+    const page = await doc.getPage(pageNumber);
+    const { width, height } = page.getViewport({ scale: 1 });
+    page.cleanup();
+    return { width, height };
   }
 
   /** A small JPEG of a page for previews, sized for the screen's pixel density. */
@@ -247,5 +258,5 @@
     else setTimeout(run, 600);
   }
 
-  window.PdfPreview = Object.freeze({ open, renderImage, thumbnail, pageGrid, bindSelection, warm });
+  window.PdfPreview = Object.freeze({ open, renderImage, pageSize, thumbnail, pageGrid, bindSelection, warm });
 })();

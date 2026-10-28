@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace https://example.com/ with your site's address before publishing. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://example.com/</loc></url>
-  <url><loc>https://example.com/image-to-pdf/</loc></url>
-  <url><loc>https://example.com/pdf-to-image/</loc></url>
-  <url><loc>https://example.com/merge-pdf/</loc></url>
-  <url><loc>https://example.com/split-pdf/</loc></url>
-  <url><loc>https://example.com/compress-image/</loc></url>
-  <url><loc>https://example.com/rotate-pdf/</loc></url>
-  <url><loc>https://example.com/privacy/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/image-to-pdf/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/pdf-to-image/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/merge-pdf/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/split-pdf/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/compress-pdf/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/rotate-pdf/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/add-page-numbers/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/watermark-pdf/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/compress-image/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/resize-image/</loc></url>
+  <url><loc>https://nearfile.everydayaitools.workers.dev/privacy/</loc></url>
 </urlset>
