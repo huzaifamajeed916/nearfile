@@ -39,7 +39,7 @@ export default {
       statusText: response.statusText,
       headers
     });
-
+    
     return new HTMLRewriter()
       .on("script", {
         element(element) {
