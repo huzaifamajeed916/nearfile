@@ -1,4 +1,3 @@
-
 export default {
   async fetch(request, env) {
     const response = await env.ASSETS.fetch(request);
@@ -39,8 +38,23 @@ export default {
       statusText: response.statusText,
       headers
     });
-    
+
     return new HTMLRewriter()
+      .on("head", {
+        element(element) {
+          // Add Google Analytics to every HTML page served by this Worker.
+          element.append(
+            `<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1Y7NV8GC3" nonce="${nonce}"></script>
+<script nonce="${nonce}">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P1Y7NV8GC3');
+</script>`,
+            { html: true }
+          );
+        }
+      })
       .on("script", {
         element(element) {
           element.setAttribute("nonce", nonce);
